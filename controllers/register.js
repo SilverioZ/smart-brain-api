@@ -29,4 +29,6 @@ return res.status(400).json('incorrect form submission');
   .catch(err => res.status(400).json('unable to register'))
 }
 
-export default handleRegister;
+module.exports = {
+    handleRegister: handleRegister
+}
