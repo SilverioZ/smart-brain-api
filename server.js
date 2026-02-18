@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
-import handleRegister from "./controllers/register.js";
+import handleRegister from './controllers/register.js';
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 const port = process.env.PORT;
@@ -35,8 +35,8 @@ app.get('/profile/:id', (req, res) => {profile.handleProfileGet(req, res, db)})
 app.put('/image', (req, res) => {image.handleImage(req, res, db)})
 app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
 
-app.listen(port, ()=> {
-	console.log('app is running on port ${port}')
+app.listen(PORT, ()=> {
+	console.log('app is running on PORT ${PORT}')
 })
 
 
