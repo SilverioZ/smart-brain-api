@@ -1,7 +1,8 @@
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
-const handleRegister = require('./controllers/register');
+const register = require('./controllers/register');
+const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 const port = process.env.PORT || 5432;
