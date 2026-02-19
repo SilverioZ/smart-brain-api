@@ -10,7 +10,6 @@ const databaseUrl = process.env.DATABASE_URL;
 const db = require('knex')({
   client: 'pg',
   connection: {
-  connectionString: process.env.DATABASE_URL,
     host: process.env.DATABASE_HOST,
     port: 5432,
     user: process.env.DATABASE_USER,
