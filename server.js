@@ -5,6 +5,7 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
+const databaseUrl = process.env.DATABASE_URL;
 const port = process.env.PORT;
 const db = require('knex')({
   client: 'pg',
