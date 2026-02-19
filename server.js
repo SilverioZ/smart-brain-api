@@ -10,9 +10,9 @@ const db = require('knex')({
   client: 'pg',
   connection: {
 	connectionString: process.env.DATABASE_URL,
-	ssl: {
+	  ssl: {
     rejectUnauthorized: false // Required for Render's SSL in some setups
-  }
+  },
     host: process.env.DATABASE_HOST,
     port: 5432,
     user: process.env.DATABASE_USER,
