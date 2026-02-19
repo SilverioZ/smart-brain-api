@@ -4,7 +4,7 @@ const cors = require('cors');
 const handleRegister = require('./controllers/register');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
-const port = process.env.PORT;
+const port = process.env.PORT || 5432;
 const databaseUrl = process.env.DATABASE_URL;
 const db = require('knex')({
   client: 'pg',
