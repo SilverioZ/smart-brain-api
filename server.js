@@ -5,16 +5,15 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
-const databaseUrl = process.env.DATABASE_URL;
+const databaseUrl = process.env.DATABASE_URL
+const { Pool } = require('pg')const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+})
 const port = process.env.PORT;
 const db = require('knex')({
   client: 'pg',
   connection: {
-	connectionString: process.env.DATABASE_URL,
-	  ssl: {
-    rejectUnauthorized: false // Required for Render's SSL in some setups
-  },
-    host: process.env.DATABASE_HOST,
+	host: process.env.DATABASE_HOST,
     port: 5432,
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PW,
