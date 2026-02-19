@@ -7,9 +7,6 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 const databaseUrl = process.env.DATABASE_URL
 const { Pool } = require('pg')
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-})
 const port = process.env.PORT;
 const db = require('knex')({
   client: 'pg',
