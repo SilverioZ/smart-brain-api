@@ -7,7 +7,6 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 const database = process.env.DATABASE_URL;
 const port = process.env.PORT;
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
 const db = require('knex')({
   client: 'pg',
   connection: {
